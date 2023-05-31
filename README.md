@@ -1,4 +1,4 @@
-# Cloud-Security-2023
+# Cloud-Security-2023 (with notes)
 Create code that can automatically exploit its documented vulnerabilities.
 
 **Cross-Site Scripting(XSS attack)**-harmful because they can be used to steal sensitive information, like login credentials or personal data from users.
