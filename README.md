@@ -4,7 +4,7 @@ Create code that can automatically exploit its documented vulnerabilities.
 **Cross-Site Scripting(XSS attack)**-harmful because they can be used to steal sensitive information, like login credentials or personal data from users.
 How to execute an XSS attack- the payload variable contains a script tag with malicious JavaScript code. Problem arises if the server doesn't correctly/properly sanitize or encode the feedback parameter when rendering it in an HTML response. Consequence- script modified on the client side (XSS attack)
 
-**Python Code for Cross-Site Scripting**
+**Python Code for Cross-Site Scripting** 
 
 import requests  
 payload = "<script>alert('XSS Attack!');</script>" #Payload variable mentioned above- site of vulnerability 
